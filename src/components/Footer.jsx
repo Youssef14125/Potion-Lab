@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="font-display text-stone-300">🧪 POTION LAB</p>
           <p>Est. by an apprentice alchemist, somewhere beneath Cairo.</p>
-          <p>© {new Date().getFullYear()} Potion Lab — a portfolio project.</p>
+          <p>© {new Date().getFullYear()} Potion Lab.</p>
         </div>
       </div>
     </footer>
