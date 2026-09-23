@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0a0710;
+    background-image: radial-gradient(circle at 20% 0%, rgba(139,92,246,0.12), transparent 55%),
+      radial-gradient(circle at 80% 10%, rgba(212,175,55,0.08), transparent 50%);
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4 { font-family: theme("fontFamily.display"); }
+}
+
+@layer components {
+  .card-surface {
+    background: linear-gradient(180deg, rgba(28,20,48,0.9), rgba(18,12,30,0.9));
+    border: 1px solid rgba(139, 92, 246, 0.2);
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-gradient-to-r from-potion-purple to-purple-700
+      px-5 py-2.5 font-display text-sm font-semibold uppercase tracking-wide text-white shadow-glow
+      transition-transform hover:scale-[1.03] active:scale-[0.98] disabled:opacity-40 disabled:pointer-events-none;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-potion-gold/50 bg-transparent
+      px-5 py-2.5 font-display text-sm font-semibold uppercase tracking-wide text-potion-gold
+      transition-colors hover:bg-potion-gold/10 disabled:opacity-40 disabled:pointer-events-none;
+  }
+  .input-field {
+    @apply w-full rounded-md border border-cauldron-600 bg-cauldron-900/80 px-4 py-2.5 text-stone-200
+      placeholder:text-stone-500 focus:border-potion-purple focus:outline-none focus:ring-1 focus:ring-potion-purple;
+  }
+  .rarity-Common { color: #c7c7c7; }
+  .rarity-Uncommon { color: #2dd4bf; }
+  .rarity-Rare { color: #60a5fa; }
+  .rarity-Epic { color: #c084fc; }
+  .rarity-Legendary { color: #d4af37; }
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #120c1e; }
+::-webkit-scrollbar-thumb { background: #3b2b5e; border-radius: 6px; }
